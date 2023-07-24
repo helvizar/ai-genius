@@ -58,7 +58,7 @@ const ConversationPage = () => {
         // TODO: Open Pro Modal
         console.log(error);
       } finally {
-        router.refresh();
+        router.refresh(); // really cool to work with server and client component in next 13
       }
 	};
 
