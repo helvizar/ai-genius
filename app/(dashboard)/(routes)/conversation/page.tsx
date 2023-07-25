@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 import { Heading } from "@/components/heading";
 import {
@@ -59,6 +60,8 @@ const ConversationPage = () => {
       } catch (error: any) {
         if (error?.response?.status === 403) {
           proModal.onOpen();
+        } else {
+          toast.error("Something went wrong");
         }
       } finally {
         router.refresh(); // really cool to work with server and client component in next 13
