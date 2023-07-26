@@ -10,10 +10,7 @@ import { CrispProvider } from "@/components/crisp-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/logo.png"
-  },
-  title: "Genius",
+  title: "Genius - Your Ultimate Creative Partner",
   description: "AI Platform",
 };
 
